@@ -1,0 +1,107 @@
+body {
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  body::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 59%;
+    background-image: url('Images/Cafe.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    z-index: -1;
+  }
+  
+  .container {
+    
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  
+.upper-section  {
+    background-color:antiquewhite;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   justify-content: center;
+   font-weight: bold;
+          
+  }
+  
+  @media (max-width: 767px) {
+    body::before {
+      height: 60%;
+    }
+  }
+  
+  h1, h2 {
+    text-align: auto;
+    margin-bottom: 3px;
+    margin-top: 5px;
+  }
+  
+  
+button {
+    margin-top: 5px;
+    margin-bottom: 3px;
+    font-weight: bolder;
+    background-color:green;
+    color: white;
+    font-size: medium;
+    
+  }
+
+  .welcome-message {
+   
+    color:blue;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;}
+
+
+
+#available-ingredients, #selected-ingredients {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#available-ingredients li, #selected-ingredients li {
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+#available-ingredients li::before, #selected-ingredients li::before {
+  content: '•';
+  margin-right: 5px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#selected-ingredients ul {
+  list-style-type: disc;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+#selected-ingredients li {
+  display: inline-block;
+  margin-right: 10px;
+}
